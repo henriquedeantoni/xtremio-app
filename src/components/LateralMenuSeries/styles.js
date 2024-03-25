@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { theme } from '../../utils/themes'
 
 export const Container = styled.div`
-  height: 93%;
+  height: 100vh;
   background-color: ${theme.colors.backColor};
   padding: 0;
   display: flex;
@@ -12,7 +12,6 @@ export const Container = styled.div`
 `
 
 export const ContainerItems = styled.div`
-  height: 100%;
   background-color: ${theme.colors.backColor};
   width: ${(props) => (props.isOpen ? '12vw' : '0')};
   transition: 0.05s;
@@ -66,7 +65,7 @@ export const Button = styled.button`
 
 export const DivButton = styled.div`
   width: 45px;
-  height: 100%;
+  //height: 100%;
   background-color: ${theme.colors.backColor};
   display: flex;
   align-items: center;
@@ -86,8 +85,8 @@ export const ArrowImage = styled.img`
 
 export const DivLine = styled.div`
   border-bottom: 2px solid #ffffff;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 `
 
 export const LiGenre = styled.li`
