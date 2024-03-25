@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { theme } from '../../utils/themes'
 
 export const Container = styled.div`
+  max-width: 98vw;
   padding-top: 55px;
   display: flex;
   flex-direction: column;
