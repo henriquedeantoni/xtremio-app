@@ -65,7 +65,7 @@ export const Button = styled.button`
 
 export const DivButton = styled.div`
   width: 45px;
-  //height: 100%;
+  height: 100%;
   background-color: ${theme.colors.backColor};
   display: flex;
   align-items: center;
