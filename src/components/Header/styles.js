@@ -23,13 +23,19 @@ export const Menu = styled.ul`
   display: flex;
   list-style: none;
   gap: 60px;
+  width: 500px;
+  align-items: center;
 `
 
 export const Li = styled.li`
   font-weight: 600;
   cursor: pointer;
-  font-size: 30px;
+  font-size: 20px;
   position: relative;
+  align-items: center;
+  display: flex;
+  width: 90px;
+  justify-content: space-between;
 
   a {
     text-decoration: none;
@@ -51,4 +57,31 @@ export const Li = styled.li`
   &:hover::after {
     width: 100%;
   }
+`
+export const UserInfo = styled.div`
+  background-color: transparent;
+  display: flex;
+  gap: 25px;
+  justify-content: space-between;
+  width: 320px;
+  align-items: center;
+`
+
+export const UserGreetings = styled.p`
+  font-size: 20px;
+  color: #ffffff;
+  width: 150px;
+`
+
+export const PassInput = styled.input`
+  background-color: ${theme.colors.backGround};
+  width: 100px;
+  height: 30px;
+  line-height: 15px;
+  border-radius: 8px;
+  border: solid 1.5px ${theme.colors.purpleDark};
+  padding: 2.5px 8px;
+  font-size: 15px;
+  color: ${theme.colors.whiteFont};
+  text-align: middle;
 `

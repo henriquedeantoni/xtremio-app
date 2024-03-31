@@ -11,7 +11,7 @@ import {
   getMostPopular,
   getMostWatched,
   getMovieByGenre,
-  getMovieSearch,
+  // getMovieSearch,
   getNowPlaying,
   getUpComing,
 } from '../../services/getData'
@@ -37,6 +37,16 @@ function LateralMenuMovie({ genres, setMediaList, setResetComponent }) {
   const [genreId, setGenreId] = useState(0)
   const [key, setKey] = useState(0)
   const [pageIndex, setPageIndex] = useState(1)
+
+  function changePage() {
+    setPageIndex(1)
+    localStorage.setItem('localPage', 1)
+  }
+
+  /*  const changePage = (event) => {
+    setPageIndex(1)
+    localStorage.setItem('localPage', 1)
+  } */
 
   const handleChange = (event) => {
     setInputValue(event.target.value)
@@ -121,7 +131,7 @@ function LateralMenuMovie({ genres, setMediaList, setResetComponent }) {
             console.log(error)
           }
           break
-        case key:
+        /* case key:
           try {
             // localStorage.setItem('localPage', 1)
             const [listResult] = await Promise.all([
@@ -130,7 +140,7 @@ function LateralMenuMovie({ genres, setMediaList, setResetComponent }) {
             setMediaList(listResult)
           } catch (error) {
             console.log(error)
-          }
+          } */
       }
     }
     fetchData(key)
@@ -159,6 +169,7 @@ function LateralMenuMovie({ genres, setMediaList, setResetComponent }) {
               </Li>
               <Li
                 onClick={() => {
+                  changePage()
                   setKey('mostWatched')
                   localStorage.setItem('localPage', 1)
                   handleResetComponent()
@@ -171,6 +182,7 @@ function LateralMenuMovie({ genres, setMediaList, setResetComponent }) {
               </Li>
               <Li
                 onClick={() => {
+                  changePage()
                   setKey('nowPlaying')
                   localStorage.setItem('localPage', 1)
                   handleResetComponent()
@@ -183,6 +195,7 @@ function LateralMenuMovie({ genres, setMediaList, setResetComponent }) {
               </Li>
               <Li
                 onClick={() => {
+                  changePage()
                   setKey('upComing')
                   localStorage.setItem('localPage', 1)
                   handleResetComponent()
@@ -196,6 +209,7 @@ function LateralMenuMovie({ genres, setMediaList, setResetComponent }) {
               <Li
                 onClick={() => {
                   setKey('mostPopular')
+                  changePage()
                   localStorage.setItem('localPage', 1)
                   handleResetComponent()
                 }}
@@ -214,6 +228,7 @@ function LateralMenuMovie({ genres, setMediaList, setResetComponent }) {
                     key={index}
                     value={movieGenre.id}
                     onClick={() => {
+                      changePage()
                       handleGenreClick(movieGenre.id)
                       handleResetComponent()
                     }}

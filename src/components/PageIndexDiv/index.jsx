@@ -6,18 +6,18 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 import { Container, Number } from './styles'
 
 function PageIndexDiv({ onClick, resetComponent }) {
-  const [pageSelected, setPageSelect] = useState(1)
+  const [pageSelected, setPageSelect] = useState()
   // console.log('resetComponent: ' + resetComponent)
-  useEffect(() => {
+  /* useEffect(() => {
     if (resetComponent) {
       setPageSelect(1)
     }
-  }, [resetComponent])
+  }, [resetComponent]) */
 
   useEffect(() => {
     const localPage = localStorage.getItem('localPage')
     setPageSelect(localPage ? parseInt(localPage) : 1)
-  }, [])
+  }, [resetComponent])
 
   const rangeIndex = 10
   const indexInitial =
@@ -29,12 +29,9 @@ function PageIndexDiv({ onClick, resetComponent }) {
   )
 
   function changePage(isReturn, initialValue) {
-    setPageSelect((prevPage) => {
-      const newValue = isReturn ? prevPage - 1 : prevPage + 1
-      return newValue
-    })
-
-    localStorage.setItem('localPage', pageSelected)
+    const newValue = isReturn ? initialValue - 1 : initialValue + 1
+    setPageSelect(newValue)
+    localStorage.setItem('localPage', newValue)
   }
 
   useEffect(() => {
@@ -44,7 +41,7 @@ function PageIndexDiv({ onClick, resetComponent }) {
       }
     }
     updatePage()
-  }, [pageSelected])
+  }, [pageSelected, resetComponent])
 
   function selectPage(pageValue) {
     setPageSelect(pageValue)
@@ -78,7 +75,7 @@ function PageIndexDiv({ onClick, resetComponent }) {
         <ArrowForwardIosIcon
           sx={{ color: '#ffffff', cursor: 'pointer', margin: '10px' }}
           onClick={() => changePage(false, pageSelected)}
-          updatePage={() => localStorage.setItem('localPage', pageSelected)}
+          // updatePage={() => localStorage.setItem('localPage', pageSelected)}
         />
       </Container>
     </>
