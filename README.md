@@ -10,7 +10,11 @@ A aplicação faz uso da API pública do site: https://developer.themoviedb.org/
 
 A aplicação é formada por 6 telas: Principal(ou Home), Buscar (no catálogo), Filmes, Séries, Detalhe e Configurações.
 
+## Tecnologias Usadas
 
+1. React
+2. Javascript
+3. Styled-Components
 
 ## Como Rodar o Projeto
 
