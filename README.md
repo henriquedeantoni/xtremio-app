@@ -22,4 +22,5 @@ A aplicação é formada por 6 telas: Principal(ou Home), Buscar (no catálogo),
 6.  Adicione o React Hook Use Form: `yarn add react-hook-use-form`
 7.  Adicione o React Hook Form: `yarn add react-hook-form`
 8.  Adicione o Axios: `yarn add axios`
+9.  Adicione o Styled Components: `Yarn add styled-components`
 10.  Inicie o servidor: yarn dev
