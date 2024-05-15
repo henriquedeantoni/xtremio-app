@@ -1,7 +1,7 @@
 # Xtremio
 
-Este projeto é o protótipo de uma plataforma de streaming de videos, filmes e séries. A motivação desse trabalho é a falta de oferta de uma plataforma de streaming local e que seja descentralizada.
-Neste primeiro momento apenas a mostra de catálogo de filmes e séries.
+Este projeto é o protótipo de uma plataforma de streaming de videos, filmes e séries. A motivação desse trabalho é a baixa oferta de serviços de streaming locais nacionais descentralizados.
+Neste primeiro momento apenas disponível mostra de catálogo de filmes e séries.
 
 A aplicação faz uso da API pública do site: https://developer.themoviedb.org/
 
