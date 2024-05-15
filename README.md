@@ -12,7 +12,7 @@ A aplicação é formada por 6 telas: Principal(ou Home), Buscar (no catálogo),
 
 
 
-## Roteiro de Instalação
+## Como Rodar o Projeto
 
 1.  Certifique-se de ter o Node.js instalado em sua máquina.
 2.  Instale o Yarn globalmente: `npm install --global yarn`
