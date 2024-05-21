@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom'
 
 import Detail from '../containers/Detail'
 import Home from '../containers/Home'
+import Login from '../containers/Login'
 import Movies from '../containers/Movies'
 import Search from '../containers/Search'
 import Series from '../containers/Series'
@@ -12,6 +13,7 @@ function Router() {
     <Routes>
       <Route element={<DefaultLayout />}>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/filmes" element={<Movies />} />
         <Route path="/series" element={<Series />} />
         <Route path="/detalhe/:id" element={<Detail />} />
