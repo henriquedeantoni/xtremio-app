@@ -4,10 +4,12 @@ import { Link, useNavigate } from 'react-router-dom'
 // import { toast } from 'react-toastify'
 
 import Logo from '../../assets/complete-logo.jpg'
-import LoginImg from '../../assets/logo.jpg'
+import LoginImg from '../../assets/posters-people.jpg'
 import Button from '../../components/Button'
 import {
   Container,
+  ContainerContent,
+  P,
   LoginImage,
   ContainerItens,
   Label,
@@ -25,30 +27,39 @@ function Login() {
 
   return (
     <Container>
-      <LoginImage src={LoginImg} alt="login-image" />
-      <ContainerItens>
-        <img src={Logo} alt="logo-code-burger" />
-        <h1>Login</h1>
+      <ContainerContent>
+        <LoginImage src={LoginImg} alt="login-image" />
+        <ContainerItens>
+          <img
+            src={Logo}
+            alt="logo-code-burger"
+            style={{ height: '160px', width: '160px' }}
+          />
+          <h2>Filmes, vídeos, séries e muito mais!</h2>
+          <P>Login</P>
+          <form noValidate onSubmit={handleSubmit()}>
+            <Label>Email</Label>
+            <Input type="email" />
 
-        <form noValidate onSubmit={handleSubmit()}>
-          <Label>Email</Label>
-          <Input type="email" />
+            <Label>Senha</Label>
+            <Input type="password" />
 
-          <Label>Senha</Label>
-          <Input type="password" />
+            <Button type="submit" style={{ marginTop: 75, marginBottom: 25 }}>
+              Sign In
+            </Button>
+          </form>
 
-          <Button type="submit" style={{ marginTop: 75, marginBottom: 25 }}>
-            Sign In
-          </Button>
-        </form>
-
-        <SignInLink>
-          Não possui conta?{' '}
-          <Link style={{ color: 'white' }} to="/">
-            Sign Up
-          </Link>
-        </SignInLink>
-      </ContainerItens>
+          <SignInLink>
+            Não possui conta?{' '}
+            <Link
+              style={{ color: 'white' }}
+              to="https://developer.themoviedb.org/"
+            >
+              Sign Up
+            </Link>
+          </SignInLink>
+        </ContainerItens>
+      </ContainerContent>
     </Container>
   )
 }

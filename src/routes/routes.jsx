@@ -11,9 +11,9 @@ import DefaultLayout from '../layout/DefaultLayout'
 function Router() {
   return (
     <Routes>
+      <Route path="/login" element={<Login />} />
       <Route element={<DefaultLayout />}>
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
         <Route path="/filmes" element={<Movies />} />
         <Route path="/series" element={<Series />} />
         <Route path="/detalhe/:id" element={<Detail />} />

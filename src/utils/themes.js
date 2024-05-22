@@ -1,6 +1,7 @@
 export const theme = {
   colors: {
     backGround: '#001122',
+    backContainer: '#002D4E',
     backColor: '#002d4e',
     darkBlue: '#044479',
     blueMixed: '#5561b0',

@@ -5,14 +5,14 @@ import { ButtonRed, ButtonWhite } from './styles'
 function Button({ children, isRed, ...rest }) {
   const [shadowIntensity, setShadowIntensity] = useState(0)
 
-  setInterval(() => {
+  /* setInterval(() => {
     setTimeout(() => {
       setShadowIntensity(20)
     }, 3000)
     setTimeout(() => {
       setShadowIntensity(0)
     }, 3000)
-  }, 6000)
+  }, 6000) */
 
   // console.log(shadowIntensity)
   return (

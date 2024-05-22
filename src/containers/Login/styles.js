@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 import Background from '../../assets/background2.jpg'
+import { theme } from '../../utils/themes'
 
 export const Container = styled.div`
   height: 100vh;
@@ -11,12 +12,44 @@ export const Container = styled.div`
   align-items: center;
 `
 
+export const ContainerContent = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: ${theme.colors.backContainer};
+  border-radius: 30px;
+  border: ${theme.colors.purpleVibrant} solid 2px;
+  img {
+    margin: 0 auto;
+  }
+  h2 {
+    font-style: normal;
+    color: ${theme.colors.purpleVibrant};
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    text-align: center;
+    margin-top: 25px;
+  }
+`
+
+export const P = styled.p`
+  font-style: normal;
+  color: ${theme.colors.purpleVibrant};
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: left;
+  margin-top: 25px;
+`
+
 export const LoginImage = styled.img`
   height: 70%;
+  padding: 20px;
+  border-radius: 40px;
 `
 
 export const ContainerItens = styled.div`
-  background: #373737;
   border-radius: 0 10px 10px 0;
   height: 70%;
   padding: 25px 75px;
