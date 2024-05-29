@@ -1,5 +1,5 @@
 import React from 'react'
-// import { useForm } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 import { Link, useNavigate } from 'react-router-dom'
 // import { toast } from 'react-toastify'
 
@@ -20,10 +20,29 @@ import {
 function Login() {
   const navigate = useNavigate()
   // const { putUserData } = useUser()
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
 
-  const handleSubmit = () => {
-    console.log('ok')
-  }
+  const {
+    register,
+    handleSubmit,
+    formState: { errors }
+  } = useForm({
+    resolver: yupResolver(schema)
+  })
+
+  const onSubmit = async clientData => {
+    const { data } = await toast.promise(
+      api.post('/sessions', {
+        email: clientData.email,
+        password: clientData.password
+      }),
+      {
+        pending: 'Verificando seus dados',
+        success: 'Seja bem-vindo(a)',
+        error: 'Verifique seu e-mail e senha'
+      }
+    )
 
   return (
     <Container>
